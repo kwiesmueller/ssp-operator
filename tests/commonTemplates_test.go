@@ -44,7 +44,7 @@ var _ = Describe("Common templates", func() {
 			Namsespace: "",
 		}
 		testTemplate = testResource{
-			Name:       "centos6-server-large",
+			Name:       "centos6-server-large-v0.11.3",
 			Namsespace: strategy.GetTemplatesNamespace(),
 			resource:   &templatev1.Template{},
 		}

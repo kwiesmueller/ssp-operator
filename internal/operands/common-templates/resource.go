@@ -2,10 +2,9 @@ package common_templates
 
 import (
 	"bytes"
+	templatev1 "github.com/openshift/api/template/v1"
 	"io"
 	"io/ioutil"
-
-	templatev1 "github.com/openshift/api/template/v1"
 	core "k8s.io/api/core/v1"
 	rbac "k8s.io/api/rbac/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -17,7 +16,7 @@ const (
 	bundleDir           = "data/common-templates-bundle/"
 	ViewRoleName        = "os-images.kubevirt.io:view"
 	EditClusterRoleName = "os-images.kubevirt.io:edit"
-	Version             = "v0.13.0-rc.0"
+	Version             = "v0.12.2"
 )
 
 func readTemplates(filename string) ([]templatev1.Template, error) {
