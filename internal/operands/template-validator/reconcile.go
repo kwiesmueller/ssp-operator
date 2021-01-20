@@ -90,7 +90,9 @@ func reconcileClusterRole(request *common.Request) (common.ResourceStatus, error
 func reconcileServiceAccount(request *common.Request) (common.ResourceStatus, error) {
 	return common.CreateOrUpdateResource(request,
 		newServiceAccount(request.Namespace),
-		func(_, _ controllerutil.Object) {})
+		func(_, _ controllerutil.Object) {
+			// there is nothing to update here (sonarcloud test)
+		})
 }
 
 func reconcileClusterRoleBinding(request *common.Request) (common.ResourceStatus, error) {
